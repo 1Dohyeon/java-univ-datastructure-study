@@ -10,8 +10,13 @@ If "Overflow" occurs that is a situation in which no new items are inserted beca
 
 "resize" is the method of enlarging and shrinking the size of the array described above.
 Accept "newSize" as a parameter for the size of the new array, create a temporary array with memory space as much as "newSize", and copy elements from the existing array. When copying, you can see that the time complexity of "resize" is "O(N)" because you copy each element using a repetition statement.
+
+### insertLast
+이 함수는 배열 마지막에 newItem을 삽입하는 함수이기 때문에 배열의 크기가 꽉 차지 않는다면 마지막에 항목을 삽입만 하면 되므로 시간복잡도가 O(1)임을 알 수 있습니다.
+하지만 만약 원소의 갯수가 배열의 크기와 같아져 resize를 하게 된다면 시간복잡도는 O(N)이 나오게 됩니다.
 ### insert, delete
-이 메소드들은 배열 중간에 원소를 삽입하거나 중간에 있는 원소를 삭제할 경우에 원소들을 한 칸씩 뒤로 밀거나 앞으로 댕깁니다. 그렇기에 "insert"와 "delete"의 시간복잡도는 "O(N)"임을 알 수 있습니다.
+이 메소드들은 배열 중간에 원소를 삽입하거나 중간에 있는 원소를 삭제할 경우에 반복문을 이용하여 원소들을 한 칸씩 뒤로 밀거나 앞으로 당깁니다. 
+이 과정에서 시간복잡도는 O(N)이 걸리기 때문에 resize를 하지 않는다 해도 "insert"와 "delete"의 시간복잡도는 "O(N)"임을 알 수 있습니다.
 
 These methods push back or pull back the elements one by one when you insert elements in the middle of the array or delete elements in the middle. Therefore, You can see that the time complexity of "insert" and "delete" is "O(N)."
 
