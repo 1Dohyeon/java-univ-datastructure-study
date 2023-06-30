@@ -28,6 +28,8 @@ These methods push back or pull back the elements one by one when you insert ele
 이 메소드는 반복문을 이용하여 첫 노드부터 다음 노드까지 계속 이동하여 "target"을 탐색합니다. 
 그렇기에 최악의 경우 시간복잡도는 "O(N)"임을 알 수 있습니다.
 ### insertFront, deleteFront
+"insertFront"에서는 newItem을 가진 노드의 next Node를 head로 설정하고, 새로운 노드를 head로 다시 재설정 하는 과정입니다.
+"DeleteFront"에서는 head를 head의 next로 지정하면서 head를 소거하는 과정입니다.
 "Linked List"의 앞부분에 노드를 삽입/삭제하는 메소드로 "head"와의 연결만 주의하면 되기에 시간복잡도는 "O(1)"임을 알 수 있습니다.
 ### insertAfter, deleteAfter
 주어진 노드 p가 가리키는 다음 노드에 삽입하거나 다음 노드를 삭제하는 메소드로, "insertAfter"는 p의 다음 노드에 새로운 노드를 만들고 그 노드를 p의 원래 다음 노드와 연결시키면 됩니다.
