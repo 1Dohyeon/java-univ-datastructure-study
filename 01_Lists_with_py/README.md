@@ -6,7 +6,7 @@ A dynamic array expands or reduces the allocated memory space while a program is
 If "Overflow" occurs that is a situation in which no new items are inserted because there are no spaces, double the size of the array, and if the number of elements is 1/4 of the size of the array, reduce the size of the array by 1/2.
 ### resize
 "resize"가 바로 위에서 설명한 배열의 크기를 확대 및 축소하는 메소드입니다.
-새로운 배열의 크기로 "newSize"를 파라미터로 받고, "newSize"만큼의 메모리 공간을 가진 임시 배열을 생성하고 기존 배열의 원소를 복사합니다. 복사를 할 때 반복문을 이용하여 원소 하나하나를 복사하기에 "resize"의 시간복잡도는 "O(N)"임을 알 수 있습니다.
+새로운 배열의 크기로 "newSize"를 파라미터로 받고, "newSize"만큼의 메모리 공간을 가진 임시 배열을 생성하고 기존 배열의 원소를 복사합니다. 복사를 할 때 반복문을 이용하여 원소를 하나하나 전부 복사하기에 "resize"의 시간복잡도는 "O(N)"임을 알 수 있습니다.
 
 "resize" is the method of enlarging and shrinking the size of the array described above.
 Accept "newSize" as a parameter for the size of the new array, create a temporary array with memory space as much as "newSize", and copy elements from the existing array. When copying, you can see that the time complexity of "resize" is "O(N)" because you copy each element using a repetition statement.
