@@ -48,8 +48,7 @@ class SList:
             raise ValueError
         
     def deleteAfter(self, p=Node):      # 'Node()'라고 할 경우 class를 새롭게 지정시키게 되기에 주의!
-        '''p의 Next Node(삭제할 노드)를 return하며, p의 next Node를 t의 next Node와 연결함으로써 사이에 있는 노드를
-         제거시킴. 이때 파라미터 p의 type이 Node여야함.'''
+        '''p의 Next Node(삭제할 노드)를 return.'''
         try:
             t = p.getNext()        
             p.setNext(t.getNext())
