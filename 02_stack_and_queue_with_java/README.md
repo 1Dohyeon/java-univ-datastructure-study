@@ -4,7 +4,8 @@
 ### peek() and top
 Stack은 마지막에 위치한 원소가 중요하므로 top이 마지막 원소만을 가리키게 하고 peek 메소드를 이용하여 배열의 마지막 원소를 return할 수 있습니다.
 # 02. List Stack
-처음 삽입된 원소가 head고 삽입된 원소들은 계속해서 head의 next가 된다고 생각할 수 있지만, Linked List특성상 head에 접근하기 더 쉬우므로 stack의 top원소를 head로 둡니다. 
+처음 삽입된 원소가 리스트의 첫 노드이고, 그 뒤로 삽입된 원소들은 계속해서 첫 노드의 next가 된다고 생각할 수 있습니다.
+하지만 Linked List특성상 첫 노드에 접근하기 더 쉬우므로 stack의 top원소를 리스트의 가장 첫 번째 노드로 설정합니다. 
 모두 탐색하는 것이 아닌 top에만 접근하면 되므로 삽입/삭제 시에 시간복잡도는 O(1)임을 알 수 있습니다.
 ### push()
 SinglyLinkedList를 구현했을 때의 "insertFront" 메소드처럼 "push"메소드를 이용하여 head에 새로운 원소를 담고 원래 head를 next Node로 연결합니다.
