@@ -21,8 +21,9 @@ N이 배열의 크기, front는 가장 먼저 들어온 원소, rear는 가장 �
 add()와 마찬가지지만 remove는 front값을 % q.length를 통해 갱신시켜야합니다.
 front = "(front+1) % q.length"로 갱신되고 q[front]에 null을 적용시키며 값을 삭제합니다.
 # 04. ListQueue
-List Stack과는 반대로 head가 곧 front가 됩니다. 
-먼저 들어온 원소가 front노드가 되고 그 뒤로 계속 들어온 원소들은 next 노드가 되며 연결됩니다.
+List Stack과는 반대로 head가 먼저 들어온 데이터가 됩니다. 
+먼저 들어온 데이터가 head 노드가 되고 그 뒤로 계속 들어온 원소들은 next 노드가 되며 연결됩니다.
+위와 같은 이유 때문에 리스트의 마지막 노드를 알아야하고, 그 마지막 노드와 새로 들어온 노드를 연결해야 하므로 last라는 변수르 생성해야합니다.
 ### remove()
 head를 삭제하는 것이므로 SinglyLinkedList의 deleteFront처럼 head가 head의 next 노드 값을 갖게 하므로써 기존 head값을 삭제 후 return 합니다.
 
