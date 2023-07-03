@@ -3,12 +3,12 @@ package D4_ListQueue;
 import java.util.NoSuchElementException;
 
 public class ListQueue<E extends Comparable<E>> {
-    private Node<E> front, rear;
+    private Node<E> head, last;
     private int size;
 
     // 큐 생성자
     public ListQueue() {
-        front = rear = null;
+        head = last = null;
         size = 0;
     }
 
@@ -28,12 +28,12 @@ public class ListQueue<E extends Comparable<E>> {
         Node<E> newNode = new Node<E>(newItem, null);
 
         if (isEmpty()) {
-            front = newNode;
+            head = newNode;
         } else {
-            rear.setNext(newNode);
+            last.setNext(newNode);
         }
 
-        rear = newNode;
+        last = newNode;
         size++;
     }
 
@@ -43,12 +43,12 @@ public class ListQueue<E extends Comparable<E>> {
             throw new NoSuchElementException();
         }
 
-        E frontItem = front.getItem();
-        front = front.getNext();
+        E frontItem = head.getItem();
+        head = head.getNext();
 
         size--;
         if (isEmpty()) {
-            rear = null;
+            last = null;
         }
 
         return frontItem;
