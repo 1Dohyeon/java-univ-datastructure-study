@@ -4,7 +4,7 @@
 Using Python and Java, I study by implementing lists, stacks and queues, trees, navigation trees, hash tables, priority queues, sorting, graphs.
 
 ## 01. List
-    <li>a. Dynamic Array<li/>
-    <li>b. Singly Linked List<li/>
-    <li>c. Doubly Linked List<li/>
-    <li>d. Circular Linked List<li/>
+    a. Dynamic Array
+    b. Singly Linked List
+    c. Doubly Linked List
+    d. Circular Linked List
