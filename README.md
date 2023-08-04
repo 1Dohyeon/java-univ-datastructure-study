@@ -8,3 +8,39 @@ Using Python and Java, I study by implementing lists, stacks and queues, trees, 
 - Singly Linked List
 - Doubly Linked List
 - Circular Linked List
+
+## 02. Stack and Queue
+- Array Stack
+- List Stack
+- Array Queue
+- List Queue
+
+## 03. Tree
+- Binary Tree
+- Union
+
+## 04. Binary Search Tree
+- Binary Search In Array
+- Binary Search Tree
+- AVL Tree
+## 05. Priority Queue
+- Heap(downheap, upheap)
+
+## 06. Hash
+- Open Addressing : Linear Probing
+- Open Addressing : Quad Probing
+- Open Addressing : Random Probing
+- Open Addressing : Double Hashing
+- Closed Addressing : Chaining
+
+## 07. Sort
+- Selection
+- Insertion
+- Shell
+- Heap
+- Quick
+- Merge
+
+## 08. Graph
+- DFS
+- BFS
