@@ -3,44 +3,44 @@
 
 Using Python and Java, I study by implementing lists, stacks and queues, trees, navigation trees, hash tables, priority queues, sorting, graphs.
 
-## 01. List
-- Dynamic Array
-- Singly Linked List
-- Doubly Linked List
-- Circular Linked List
+## <a href="https://github.com/1Dohyeon/Study-DataStructure/tree/master/01_Lists_with_py">01. List</a>
+- <a href="https://github.com/1Dohyeon/Study-DataStructure/blob/master/01_Lists_with_py/01_DynamicArray.py">Dynamic Array</a>
+- <a href="">Singly Linked List</a>
+- <a href="">Doubly Linked List</a>
+- <a href="">Circular Linked List</a>
 
 ## 02. Stack and Queue
-- Array Stack
-- List Stack
-- Array Queue
-- List Queue
+- <a href="">Array Stack</a>
+- <a href="">List Stack</a>
+- <a href="">Array Queue</a>
+- <a href="">List Queue</a>
 
 ## 03. Tree
-- Binary Tree
-- Union
+- <a href="">Binary Tree</a>
+- <a href="">Union</a>
 
 ## 04. Binary Search Tree
-- Binary Search In Array
-- Binary Search Tree
-- AVL Tree
+- <a href="">Binary Search In Array</a>
+- <a href="">Binary Search Tree</a>
+- <a href="">AVL Tree</a>A
 ## 05. Priority Queue
-- Heap(downheap, upheap)
+- <a href="">Heap(downheap, upheap)</a>
 
 ## 06. Hash
-- Open Addressing : Linear Probing
-- Open Addressing : Quad Probing
-- Open Addressing : Random Probing
-- Open Addressing : Double Hashing
-- Closed Addressing : Chaining
+- <a href="">Open Addressing : Linear Probing</a>
+- <a href="">Open Addressing : Quad Probing</a>
+- <a href="">Open Addressing : Random Probing</a>
+- <a href="">Open Addressing : Double Hashing</a>
+- <a href="">Closed Addressing : Chaining</a>
 
 ## 07. Sort
-- Selection
-- Insertion
-- Shell
-- Heap
-- Quick
-- Merge
+- <a href="">Selection</a>
+- <a href="">Insertion</a>
+- <a href="">Shell</a>
+- <a href="">Heap</a>
+- <a href="">Quick</a>
+- <a href="">Merge</a>
 
 ## 08. Graph
-- DFS
-- BFS
+- <a href="">DFS</a>
+- <a href="">BFS</a>
