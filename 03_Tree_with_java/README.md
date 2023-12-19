@@ -126,7 +126,7 @@ public Node<Key, Value> delete(Node<Key, Value> n, Key k) {
 위와 같이 정의할 경우 각 노드의 키값은 다음과 같이 정의된다 : `x` < `p` < `y`. 이때 `y`의 최솟값 노드의 키값 `y_min` 은 `x` 의 키값보다 크다.
 
 즉, `p`의 키값보다 바로 다음단계로 큰 노드의 키값은 `y_min`이란 소리이다. 따라서 (아래 그림처럼) `y_min` 을 `p` 의 위치로 옮기고 `y_min` 의 `left` , `right` 를 기존 `p` 의 `left` , `right` 와 연결시키면 된다.
-![[Pasted image 20231216135045.png]]
+![[이진검색트리 삭제 예제.png]]
 + 기존 `y_min` 은 삭제해야한다. 
 
 전체 코드 -> [BST Code](https://github.com/1Dohyeon/Study-DataStructure/blob/master/04_BinarySearchTree_with_java/D2_BS_Tree/BST.java)
@@ -150,3 +150,44 @@ union 메소드를 통해서 나눠져 있는 트리를 통합하고, find메소
 find(n) 메소드를 실행하면 n index에서 부모노드를 따라 올라가 그 **index들의 원소를 전부 트리의 루트노드로 지정**하여 경로압축(Path Compression)을 한다.
 
 전체 코드 -> [Union AND Find Code](https://github.com/1Dohyeon/Study-DataStructure/blob/master/03_Tree_with_java/D2_Union/UnionFind.java)
+
+---
+### 3.3 AVL 트리
+
+**3.3.1 개념**
+
+3.1 에서의 이진탐색트리에 15, 13, 11, 9, 7 과 같이 계속 작은 수를 삽입하게 되면 왼쪽으로 치우쳐진 형태의 트리 모습을 갖게 된다. 큰수를 계속 삽입한다면 반대로 오른쪽으로 치우쳐지게 될 것이다.
+
+이러한 문제점을 해결하기 위해서 한쪽으로 치우쳐지면 트리를 회전시키는 것이 AVL 알고리즘이다. 이런 알고리즘을 지닌 트리를 AVL 트리 자료구조라고 한다.
+
+![[LLcase.png]]
+15 -> 10 -> 7 순으로 채워져서 트리가 왼쪽으로 치우쳐진 모양이라고 가정해보자. 이때 루트 노드이 왼쪽 자식인 10, 즉 중간 노드를 기준으로 오른쪽으로 회전시킨다. 우회전을 했다고 하여 Right Rotation 이라고 부른다. 
+
+하지만 이런 케이스는 왼쪽 자식의 왼쪽 자식 때문에 회전이 일어났으므로 Left Left Case, 즉 **LL case** 라고 부른다. 반대로 오른쪽으로 치우쳐져 있다면 위와 반대로 생각하면 쉽다.
+
+![[LRcase.png]]
+이번에는 15 -> 10 -> 12 순서로 들어왔다고 가정하자. 이때 왼쪽 자식의 오른쪽 자식에 의해서 트리 균형이 맞지 않음을 알 수 있다. 따라서 Left Right case, 줄여서 LR case 라고 한다. 오른쪽으로 치우쳐진 것을 회복하기 위해 왼쪽으로 먼저 회전시키고, 오른쪽으로 다시 회전시켜 균형을 맞춘다.
+
+**3.3.2 Right Rotation**
+``` java
+	private Node<Key, Value> rotateRight(Node<Key, Value> n) {
+        Node<Key, Value> x = n.left;
+        n.left = x.right;
+        x.right = n;
+        
+        // 높이 갱신
+        n.height = tallerHeight(height(n.left), height(n.right)) + 1;
+        x.height = tallerHeight(height(x.left), height(x.right)) + 1;
+
+        return x;
+    }
+```
+![[LLcase 코드대로 실행 예제.png]]
+
+3.3.1 에서 예를 든 것처럼 15 -> 10 -> 7 순서로 숫자가 들어왔다고 가정. 이때 15가 n 노드가 된다. **n 노드에서 좌우 불균형을 발견**했기 때문이다. 다음은 코드대로 실행하면 된다.
+
+n의 왼쪽 자식을 x라고 두고, n의 왼쪽 자식 위치로 x의 오른쪽 자식을 옮긴다. x의 오른쪽 자식은 없으므로 null. 그다음 x의 오른쪽 자식에 n을 위치시키면 마치 트리가 회전한 것처럼 보인다.
+
+왼쪽으로 회전은 위와 반대로 작동한다. **tallerHeight()** 메서드는 n과 x의 위치가 변했기 때문에 높이를 갱신해준 것이다. 왼쪽 오른쪽 자식의 높이차이가 2이상 나면 회전을 해야하기 때문이다.
+
+전체 코드 -> [AVL](https://github.com/1Dohyeon/Study-DataStructure/blob/master/03_Tree_with_java/D3_AVL/AVL.java)
