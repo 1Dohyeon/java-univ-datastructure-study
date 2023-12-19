@@ -60,4 +60,4 @@ downheap은 루트부터 시작한다. 즉, `a[1]` 부터 시작하여 왼쪽 �
 
 그 후 `i = k` 로 업데이트한다. 즉 바꾸는 기준이 된 root 노드를 계속 따라가서 비교하겠다는 의미이다. 위 과정을 반복하여 자신이 자식들보다 값이 작은 경우에는 `break` 하여 downheap 수행을 멈춘다. 
 
-전체 코드 -> [AVL](https://github.com/1Dohyeon/Study-DataStructure/blob/master/04_PriorityQ_with_java/D1_PriorityQ/BHeap.java)
+전체 코드 -> [Priority Queue](https://github.com/1Dohyeon/Study-DataStructure/blob/master/04_PriorityQ_with_java/D1_PriorityQ/BHeap.java)
