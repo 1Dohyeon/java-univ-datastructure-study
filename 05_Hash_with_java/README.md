@@ -45,7 +45,7 @@ Double Hashing(이중 해싱) 은 말 그대로 두번 해싱을 하는 것이�
 
 Closed Addressing 은 폐쇄주소방식이라고 하며 충돌한다면 빈 곳을 찾는게 아니라 충돌한 키들을 한 위치에 모아서 저장한다. 대표적인 방법으로는 chaining(체이닝)이 있다.
 
-충돌이 일어나면 각 배열 안에 [1.2 Singly Linked List](https://github.com/1Dohyeon/Study-DataStructure/blob/master/01_Lists_with_py/02_SinglyLinkedList.py) 에서 언급한 연결리스트를 추가하는 것이다. 
+충돌이 일어나면 테이블의 각 인덱스 안에 [1.2 Singly Linked List](https://github.com/1Dohyeon/Study-DataStructure/blob/master/01_Lists_with_py/02_SinglyLinkedList.py) 에서 언급한 연결리스트를 추가하는 것이다. 
 
 ![[체이닝 예시 이미지.png]]
 
