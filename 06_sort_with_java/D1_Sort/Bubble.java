@@ -22,7 +22,7 @@ public class Bubble {
 
             for (int j = 0; j < n - 1 - i; j++) {
                 if (array[j] > array[j + 1]) {
-                    // 두 원소의 위치를 바꿔줍니다.
+                    // 두 원소의 위치 바꿈
                     int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
@@ -30,7 +30,7 @@ public class Bubble {
                 }
             }
 
-            // 배열이 정렬되었다면 더 이상 반복할 필요가 없습니다.
+            // 배열이 정렬되었다면 더 이상 반복할 필요가 없다.
             if (!swapped) {
                 break;
             }
