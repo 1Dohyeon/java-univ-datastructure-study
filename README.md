@@ -1,4 +1,4 @@
-# DataStructure(자료구조)
+## DataStructure(자료구조)
 
 ### <a href="https://github.com/1Dohyeon/Study-DataStructure/tree/master/01_Lists_with_py">01. List</a> - [[1. DynamicArray AND LinkedList]]
 - 1.1 <a href="https://github.com/1Dohyeon/Study-DataStructure/blob/master/01_Lists_with_py/01_DynamicArray.py">Dynamic Array</a>
